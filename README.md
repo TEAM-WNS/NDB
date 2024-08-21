@@ -33,7 +33,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
     <th>userId:userPw:role</th>
   </tr>
   <tr>
-    <th>dataBase, collection</th>
+    <th>database, collection</th>
     <th>각각의 이름</th>
   </tr>
 </table>
