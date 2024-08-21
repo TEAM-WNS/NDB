@@ -62,6 +62,24 @@ export class DataService {
             return { result: "fail", cause: "unknown" }
         }
     }
+    
+    async addFieldValue(dbName: string, collectionName: string, findBy: string, key: string, value: number | string | boolean) {
+        try { 
+            const filePath = join(__dirname, '..', 'db', dbName, collectionName, 'data.json');
+            const fileContent = await fs.readFile(filePath, 'utf-8');
+            const jsonData = JSON.parse(fileContent);
+
+            jsonData[findBy][key] = value;
+
+            const updatedJsonString = JSON.stringify(jsonData, null, 2);
+            await fs.writeFile(filePath, updatedJsonString, 'utf-8');
+            return { result: "success", cause: "" }
+        } catch (error) {
+            console.log(error)
+            return { result: "fail", cause: "unknown" }
+        }
+    }
+
     async editJson(dbName: string, collectionName: string, key: string, newJson: JSON) {
         try {
             const filePath = join(__dirname, '..', 'db', dbName, collectionName, 'data.json');
