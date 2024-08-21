@@ -18,14 +18,14 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
 ```
 
 ## `/create`
-
+- '*' 는 필수 표시
 <table>
   <tr>
     <th>query</th>
     <th>입력값</th>
   </tr>
   <tr>
-    <th>id, pw</th>
+    <th>* id, pw</th>
     <th>관리자 계정의 아이디, 비밀번호</th>
   </tr>
   <tr>
@@ -45,15 +45,15 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
     <th>입력값</th>
   </tr>
   <tr>
-    <th>id, pw</th>
+    <th>* id, pw</th>
     <th>관리자 계정의 아이디, 비밀번호</th>
   </tr>
   <tr>
-    <th>dbName</th>
+    <th>* dbName</th>
     <th>db의 이름</th>
   </tr>
   <tr>
-    <th>collectionName</th>
+    <th>* collectionName</th>
     <th>컬렉션의 이름</th>
   </tr>
   <tr>
