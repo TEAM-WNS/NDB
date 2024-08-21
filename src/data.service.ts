@@ -15,7 +15,7 @@ export class DataService {
             return this.data
         } catch (error) {
             console.error('Error loading data.json:', error);
-            return { result: "fail", cause: "NOT_FOUND_KEY" }
+            return { result: "fail", cause: "NOT_FOUND_DATABASE" }
         }
     }
 
@@ -95,7 +95,7 @@ export class DataService {
                 return { result: "fail", cause: "NOT_FOUND_KEY" }
             }
         } catch (error) {
-            return { result: "fail", cause: "NOT_FOUND_DB" }
+            return { result: "fail", cause: "NOT_FOUND_DATABASE" }
         }
     }
     async deleteDocument(dbName: string, collectionName: string, key: string) {
@@ -111,7 +111,7 @@ export class DataService {
                 return { result: "fail", cause: "NOT_FOUND_KEY" }
             }
         } catch (error) {
-            return { result: "fail", cause: "NOT_FOUND_DB" }
+            return { result: "fail", cause: "NOT_FOUND_DATABASE" }
         }
     }
 
@@ -129,7 +129,7 @@ export class DataService {
                 return { result: "fail", cause: "NOT_FOUND_KEY" }
             }
         } catch (error) {
-            return { result: "fail", cause: "NOT_FOUND_DB" }
+            return { result: "fail", cause: "NOT_FOUND_DATABASE" }
         }
     }
 
