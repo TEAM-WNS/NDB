@@ -103,6 +103,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&database=db&collection=coll ```
 - `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&findBy=Key1`
 - `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&addKey=Key3&keyValue={"H": 1}`
+- `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&findBy=Key1&edit={"kills": 3}`
 
 ### return types
 ```json
