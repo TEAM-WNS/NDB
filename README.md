@@ -90,7 +90,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
   </tr>
   <tr>
     <th>addField, fieldValue / fieldArray</th>
-    <th>document에 field-value 쌍을 추가합니다. (fieldArray는 배열입니다)</th>
+    <th>document에 field-value 쌍을 추가합니다. (fieldArray는 배열, 리스트입니다)</th>
   </tr>
     <tr>
         <th>isStrict</th>
