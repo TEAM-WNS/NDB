@@ -89,15 +89,22 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
     <th>json 자체를 완전 수정합니다</th>
   </tr>
   <tr>
-    <th>addField, fieldValue</th>
-    <th>document에 field-value 쌍을 추가합니다.</th>
+    <th>addField, fieldValue / fieldArray</th>
+    <th>document에 field-value 쌍을 추가합니다. (fieldArray는 배열입니다)</th>
   </tr>
+    <tr>
+        <th>isStrict</th>
+        <tr>엄격 모드를 끄고 킵니다. (false / true) </tr>
+    </tr>
   <tr>
     <th>deleteField</th>
     <th>key로 그 field-value 쌍을 삭제합니다.</th>
   </tr>
 </table>
 
+## 엄격모드란?
+- 엄격모드가 꺼져있으면 queryString에 입력된 모든 값들은 원래의 값으로 변환되어 저장됩니다. EX) 8 -> number, true -> boolean
+- 그러나 엄격모드가 켜져있다면 모든 값을 string으로 저장합니다. EX) 8 -> "8", trye -> "true"
 ### 예시: 
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&user=minmiddle08:kmj08_0928:member ``` 
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&database=db&collection=coll ```
