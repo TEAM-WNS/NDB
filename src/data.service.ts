@@ -7,7 +7,7 @@ import * as path from 'path';
 export class DataService {
     data: JSON;
 
-    async loadData(dbName: string, collectionName: string): Promise<JSON> {
+    async loadData(dbName: string, collectionName: string) {
         try {
             const filePath = join(__dirname, '..', 'db', dbName, collectionName, 'data.json');
             const fileContent = await fs.readFile(filePath, 'utf-8');
@@ -15,6 +15,7 @@ export class DataService {
             return this.data
         } catch (error) {
             console.error('Error loading data.json:', error);
+            return { result: "fail", cause: "NOT_FOUND_KEY" }
         }
     }
 
@@ -24,6 +25,7 @@ export class DataService {
         const filePath = join(__dirname, '..', 'db', dbName, collectionName, 'data.json');
         try {
             await fs.access(filePath);
+            return { result: "fail", cause: "ALREADY_EXIST" }
         } catch (error) {
             await fs.mkdir(path.dirname(filePath), { recursive: true });
             await fs.writeFile(filePath, jsonString, 'utf-8');
@@ -93,7 +95,7 @@ export class DataService {
                 return { result: "fail", cause: "NOT_FOUND_KEY" }
             }
         } catch (error) {
-
+            return { result: "fail", cause: "NOT_FOUND_DB" }
         }
     }
     async deleteDocument(dbName: string, collectionName: string, key: string) {
@@ -109,7 +111,7 @@ export class DataService {
                 return { result: "fail", cause: "NOT_FOUND_KEY" }
             }
         } catch (error) {
-
+            return { result: "fail", cause: "NOT_FOUND_DB" }
         }
     }
 
@@ -127,7 +129,7 @@ export class DataService {
                 return { result: "fail", cause: "NOT_FOUND_KEY" }
             }
         } catch (error) {
-
+            return { result: "fail", cause: "NOT_FOUND_DB" }
         }
     }
 
@@ -137,7 +139,7 @@ export class DataService {
             const fileContent = await fs.readFile(filePath, 'utf-8');
             return JSON.parse(fileContent)[saveKey]
         } catch (error) {
-            console.error('Error loading data.json:', error);
+            return { result: "fail", cause: "NOT_FOUND_KEY" }
         }
 
     }
