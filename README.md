@@ -101,9 +101,9 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
 ### 예시: 
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&user=minmiddle08:kmj08_0928:member ``` 
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&database=db&collection=coll ```
-- `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&findBy=Key1`
-- `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&addKey=Key3&keyValue={"H": 1}`
-- `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&findBy=Key1&edit={"kills": 3}`
+- `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&dbName=database&collectionName=coll&findBy=Key1`
+- `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&dbName=database&collectionName=coll&addKey=Key3&keyValue={"H": 1}`
+- `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&dbName=database&collectionName=coll&findBy=Key1&edit={"kills": 3}`
 
 ### return types
 ```json
