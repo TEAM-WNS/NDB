@@ -94,7 +94,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
   </tr>
     <tr>
         <th>isStrict</th>
-        <tr>엄격 모드를 끄고 킵니다. (false / true) </tr>
+        <th>엄격 모드를 끄고 킵니다. (false / true) </th>
     </tr>
   <tr>
     <th>deleteField</th>
@@ -104,7 +104,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
 
 ## 엄격모드란?
 - 엄격모드가 꺼져있으면 queryString에 입력된 모든 값들은 원래의 값으로 변환되어 저장됩니다. EX) 8 -> number, true -> boolean
-- 그러나 엄격모드가 켜져있다면 모든 값을 string으로 저장합니다. EX) 8 -> "8", trye -> "true"
+- 그러나 엄격모드가 켜져있다면 모든 값을 string으로 저장합니다. EX) 8 -> "8", true -> "true"
 ### 예시: 
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&user=minmiddle08:kmj08_0928:member ``` 
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&database=db&collection=coll ```
