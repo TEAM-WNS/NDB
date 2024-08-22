@@ -108,7 +108,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
 ### 주의!
 - 엄격 모드가 켜져있다면, 어떤 형태로 값을 넣든 간에 string 형식으로 저장되니, 가급적 엄격모드를 꺼주세요!
 ### 예시: 
-- ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&user=minmiddle08:kmj08_0928:member ``` 
+- ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&user=prevw08:1234567890:member ``` 
 - ``` https://ndb.previousw.dev/ndb/create?id=id&pw=pw&database=db&collection=coll ```
 - `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&dbName=database&collectionName=coll&findBy=Key1`
 - `https://ndb.previousw.dev/ndb/collection?id=id&pw=pw&dbName=database&collectionName=coll&addKey=Key3&keyValue={"H": 1}`
