@@ -38,6 +38,27 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
   </tr>
 </table>
 
+## `/check`
+<table>
+  <tr>
+    <th>query</th>
+    <th>입력값</th>
+  </tr>
+  <tr>
+    <th>* id, pw</th>
+    <th>관리자 계정의 아이디, 비밀번호</th>
+  </tr>
+  <tr>
+    <th>database, collection</th>
+    <th>db, 컬렉션의 이름</th>
+  </tr>
+  <tr>
+    <th>user</th>
+    <th>유저 확인. 아이디:비밀번호 형식</th>
+  </tr>
+  
+</table>
+
 ## `/collection`
 <table>
   <tr>
@@ -61,6 +82,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
     <th>찾을 data document의 key를 기준으로 document를 받습니다.</th>
   </tr>
 </table>
+
 
 ### `하위 쿼리`
 <table>
