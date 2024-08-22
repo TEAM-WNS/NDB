@@ -1,3 +1,2 @@
-id:pw:admin
 1:2:member
-ss:ssa:member
+id:pw:admin

@@ -32,6 +32,17 @@ export class DataService {
             return { result: "success", cause: "" }
         }
     }
+    async checkDataBase(dbName: string, collectionName: string) {
+        const content = { "key": { "value": 1 } }
+        const jsonString = JSON.stringify(content, null, 2);
+        const filePath = join(__dirname, '..', 'db', dbName, collectionName, 'data.json');
+        try {
+            await fs.access(filePath);
+            return { result: "ALREADY_EXIST" }
+        } catch (error) {
+            return { result: "NON_EXIST" }
+        }
+    }
 
     async addDocument(dbName: string, collectionName: string, key: string, value: JSON) {
         try { 
@@ -147,30 +158,31 @@ export class DataService {
 
     }
 
-    async getAccount(_id: string, _pw: string): Promise<Boolean> {
+    async getAccount(_id: string, _pw: string) {
         const filePath = join(__dirname, '..', 'account', 'account.txt');
         const fileContent = await fs.readFile(filePath, 'utf-8');
-        fileContent.split('\n').map(line => {
+        const lines = fileContent.split('\n');
+        for (const line of lines) {
             const [id, pw, role] = line.split(':').map(part => part.trim());
-            if (_id === id && _pw === pw) {
-                return true;
+            if (_id == id && _pw == pw) {
+                return (_id == id && _pw == pw)
             }
-        })
+        }
         return false;
     }
 
-    async isAdmin(_id: string, _pw: string): Promise<Boolean> {
+    async isAdmin(_id: string, _pw: string) {
         const filePath = join(__dirname, '..', 'account', 'account.txt');
         const fileContent = await fs.readFile(filePath, 'utf-8');
-        fileContent.split('\n').map(line => {
+        const lines = fileContent.split('\n');
+    
+        for (const line of lines) {
             const [id, pw, role] = line.split(':').map(part => part.trim());
             if (_id === id && _pw === pw) {
-                if (role === "admin") {
-                    return true;
-                } else { return false }
+                return role === "admin"; 
             }
-        })
-        return false;
+        }
+        return null;
     }
 
     async addUser(str: string) {
