@@ -145,4 +145,7 @@ base url: ```https://ndb.previousw.dev/ndb/ | your own server's domain/ndb/ ```
 ```
 
 ## CLI commands
-- 추가 예정
+- ndb create user <id> <prompt password>
+- ndb create database <name> [collection <name>]
+- ndb grant.Perm user <name> database <name> [collection <name>]
+
