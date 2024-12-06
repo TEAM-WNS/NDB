@@ -1,3 +1,6 @@
+# POST로 변경 예정
+- 설계자 잘못임 암튼 그럼 ㅇㅇ
+
 <h1 align="center"><img src="" alt= NDB></h1>
 <strong align="center">A New Json-Based DataBase made by Team-WNS</strong>
 
